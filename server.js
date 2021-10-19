@@ -29,9 +29,7 @@ function prompt() {
         "View All Employees",
         "Add A Department",
         "Add New Roles",
-        "Add An Employee",
-        "Update An Employee Role",
-        "EXIT",
+        "Add An Employee"
       ],
     })
     .then((answers) => {
@@ -60,16 +58,10 @@ function prompt() {
           addNewEmployee();
           break;
 
-        case "Update An Employee Role":
-          updateEmployeeRole();
-          break;
-
-        case "EXIT":
-          connection.end();
-          break;
-      }
+        }
     });
 }
+
 
 //View all Departments
 function viewAllDepartments() {
@@ -204,8 +196,4 @@ function addNewRole() {
         prompt();
       })
     });
-}
-
-function updateEmployeeRole() {
-  
 }
